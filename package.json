@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "bluebird": "^3.4.6",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
@@ -17,6 +18,7 @@
     "morgan": "~1.7.0",
     "multiparty": "^4.1.2",
     "qiniu": "^6.1.13",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "xml2js": "^0.4.17"
   }
 }
