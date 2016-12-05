@@ -20,12 +20,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', (req, res, next) => {
-  var rawBody='';
+  var rawBody = '';
   req.setEncoding('utf8');
   req.on('data', function (chunk) {
     rawBody += chunk;
   });
-  req.on('end', async function () {
+  req.on('end', async () => {
     console.log(rawBody);
     res.send(await WECHAT_answer(rawBody));
   })
