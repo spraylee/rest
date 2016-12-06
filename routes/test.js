@@ -1,23 +1,20 @@
 var express = require('express');
 var router = express.Router();
-var xml2js = require('xml2js');
+var path = require('path');
+
+var sendMail = require(path.join(APP_PATH, 'service/mail/send'));
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
 
-  var obj = {a: 4, b: {
-    c: '23423'
-  }}
 
-  var builder = new xml2js.Builder();
-  xml =  builder.buildObject(obj);
-
-  // var parser = new xml2js.Parser();
-  // json = parser.parseString(xml);
-  xml2js.parseString(xml,  {explicitArray : false}, function(err, json) {
-
-    res.send(json);
+  let response = await sendMail({
+    to: 'sprayleeee@qq.com',
+    title: 'TEST',
+    html: 'You can visite our website <a href="http://spraylee.com">SPRAY.COM</a><br /><img src="http://spraylee.com/public/icon.png">'
   });
+
+  res.json(response);
 
 });
 
