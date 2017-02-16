@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="study.js"></script>
+</head>
+<body>
+    <div style="border: 1px solid black; padding: 10px;width: 300px;">
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>年龄：</td>
+                <td><input type="text" id="age"></td>
+            </tr>
+            <tr>
+                <td>班级：</td>
+                <td><input type="text" id="class"></td>
+            </tr>
+            <tr>
+                <td>选择：</td>
+                <td><input type="text" id="choose"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button"  value="录入" onclick="addItem()">
+                    <input type="button"  value="清空" onclick="clearAll()">
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <p>信息检索：<input type="text" id="find"><input type="button" value="检索" onclick="findItem()"></p>
+        <p id="msg"></p>
+
+    </div>
+</body>
+</html>

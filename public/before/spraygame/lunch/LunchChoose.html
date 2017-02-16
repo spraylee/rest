@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+	<meta charset="UTF-8">
+	<title>LunchChoose</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript" src="js.js"></script>
+</head>
+<body>
+<div id="cover">
+	<h1>去吃了</h1>
+	<p>用心为您选择合理的午餐</p>
+	<p>Designed by SprayLee</p>
+</div>
+<a href="#" id="back" onclick="back()">
+	<div></div>
+	<div></div>
+</a>
+<a href="#" id="home" onclick="home()">
+	<div></div>
+	<div></div>
+</a>
+<div id="main">
+<div id="choose1" class="choose">
+	<h2>请选择人群</h2>
+	<ul>
+		<li id="choose1-li1" class="choose1-li" onclick="dianji(1,1)">朕</li>
+		<li id="choose1-li2" class="choose1-li" onclick="dianji(1,2)">左侍郎：李小波</li>
+		<li id="choose1-li3" class="choose1-li" onclick="dianji(1,3)">右侍郎：墨鱼</li>
+		<li id="choose1-li4" class="choose1-li" onclick="dianji(1,4)">嘉嘉小丸子</li>
+		<li id="choose1-li5" class="choose1-li" onclick="dianji(1,5)">豆芽小丸子</li>
+	</ul>
+	<a href="#" onclick="next()">下一步</a>
+</div>
+<div id="choose2" class="choose">
+	<h2>请选择天气</h2>
+	<ul>
+		<li id="choose2-li1" class="choose2-li" onclick="dianji(2,1)">晴空万里</li>
+		<li id="choose2-li2" class="choose2-li" onclick="dianji(2,2)">愁云密布</li>
+		<li id="choose2-li3" class="choose2-li" onclick="dianji(2,3)">山雨欲来</li>
+		<li id="choose2-li4" class="choose2-li" onclick="dianji(2,4)">大雨倾盆</li>
+		<li id="choose2-li5" class="choose2-li" onclick="dianji(2,5)">其他天气</li>
+	</ul>
+	<a href="#" onclick="next()">下一步</a>
+</div>
+<div id="choose3" class="choose">
+	<h2>请选择心情状况</h2>
+	<ul>
+		<li id="choose3-li1" class="choose3-li" onclick="dianji(3,1)">开心</li>
+		<li id="choose3-li2" class="choose3-li" onclick="dianji(3,2)">悲伤</li>
+		<li id="choose3-li3" class="choose3-li" onclick="dianji(3,3)">激动</li>
+		<li id="choose3-li4" class="choose3-li" onclick="dianji(3,4)">郁闷</li>
+		<li id="choose3-li5" class="choose3-li" onclick="dianji(3,5)">普通</li>
+	</ul>
+	<a href="#" onclick="next()">下一步</a>
+</div>
+<div id="choose4" class="choose">
+	<h2>请选择工作量大小</h2>
+	<ul>
+		<li id="choose4-li1" class="choose4-li" onclick="dianji(4,1)">无所事事</li>
+		<li id="choose4-li2" class="choose4-li" onclick="dianji(4,2)">累死累活</li>
+		<li id="choose4-li3" class="choose4-li" onclick="dianji(4,3)">普普通通</li>
+		<li id="choose4-li4" class="choose4-li" onclick="dianji(4,4)">事情较多</li>
+		<li id="choose4-li5" class="choose4-li" onclick="dianji(4,5)">事情较少</li>
+	</ul>
+	<a href="#" onclick="next()">下一步</a>
+</div>
+<div id="final">
+	<h2>智能选择的午餐是</h2>
+	<h3 id="lunch"></h3>
+	<p>Design by SprayLee</p>
+</div>
+</div>
+</body>
+</html>

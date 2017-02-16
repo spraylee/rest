@@ -8,4 +8,6 @@ router.use('/test', require('./test/index'));
 
 router.use('/ajax', require('./ajax'));
 
+router.use('/assets', require('./assets'));
+
 module.exports = router;

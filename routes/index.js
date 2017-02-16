@@ -34,5 +34,9 @@ router.post('/', (req, res, next) => {
 router.use('/api', require('./api/index'));
 router.use('/test', require('./test'));
 
+router.get('/icon', (req, res, next) => {
+  res.sendFile(path.join(APP_PATH, 'public/public/icon.png'));
+})
+
 
 module.exports = router;

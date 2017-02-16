@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {
+	text-align:center;
+}
+
+#stage {
+	margin:auto;
+	width:800px;
+	height:800px;
+	background-color:#B2D0BE;
+	position:relative;
+}
+
+.pics{
+	position:absolute;
+	width:50px;
+	height:50px;
+}
+
+.buttons {
+	border-radius:10px;
+	width:40px;
+	height:40px;
+	position:absolute;
+	background-color:rgba(1,0,0,0);
+}
+/*
+newgamebutton {
+	display:block;
+}
+*/
+p {
+	text-align:center;
+}

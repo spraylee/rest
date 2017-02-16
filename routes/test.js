@@ -18,4 +18,28 @@ router.get('/', async function(req, res, next) {
 
 });
 
+
+router.post('/', function (req, res, next) {
+  console.log('test');
+  res.json({
+    state: 0,
+    data: true
+  });
+  // res.json({
+  //   data: true,
+  //   state: 0
+  // });
+  //   console.log(1);
+  // var rawBody = '';
+  // req.setEncoding('utf8');
+  // req.on('data', function (chunk) {
+  //   rawBody += chunk;
+  //   console.log(2);
+  // });
+  // req.on('end', async () => {
+  //   console.log(rawBody);
+  //   res.send("data");
+  // })
+});
+
 module.exports = router;

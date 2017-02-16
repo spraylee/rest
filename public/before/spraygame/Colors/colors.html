@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=400,user-scalable=no">
+    <!--width=device-width,<meta name="viewport" content="width=1000,initial-scale=1080/402,maximum-scale=1080/402,minimum-scale=device-width/402,user-scalable=no,target-densitydpi=device-dpi" />-->
+    <meta charset="UTF-8">
+    <title>测试你的视力</title>
+    <link rel="stylesheet" href="colors.css">
+    <!--<script src="jquery-1.11.1.min.js"></script>-->
+    <script src="colors.js"></script>
+    <script src="setting.js"></script>
+</head>
+<body style="margin: 0; background-color: #ff87ab">
+
+    <div id="startScreen">
+        <br>
+        <br>
+        <h1>测测你的视力有多强</h1>
+        <br>
+        <h1>The Color!</h1>
+        <br>
+        <p>找出所有色块里颜色不同的一个</p>
+        <p>世界上只有Spray Lee能玩到66关</p>
+        <br>
+        <a id="startButton" href="javascript:start()" style="font-size: large">开始测试</a><br>
+        <br>
+        <a>排行榜</a>&nbsp;&nbsp;<a>更多游戏</a>
+    </div>
+    <div id="gameScreen" style="display: none;">
+        <header>
+            <div id="bigdiv">
+                <div id="div1">
+                    得分：<span id="score">0</span>
+                </div>
+                <div id="div2">
+                    <span id="time">60</span>
+                </div>
+            </div>
+
+            <a id="pause" href="javascript:pause()">暂停</a>
+
+        </header>
+        <div id="gameStage">
+
+
+        </div>
+
+    </div>
+    <div id="overScreen" style="display: none;">
+        <h1><span id="yourScore"></span>分</h1>
+        <p>你的视力评定结果如下：</p>
+        <h3>你超越了</h3>
+        <h2 id="result"></h2>
+        <h3>的测试者</h3>
+        <a id="share" href="javascript:share()">分享</a><br>
+        <a id="playAgain" href="javascript:start()">再玩一次</a><br>
+        <a>排行榜</a>&nbsp;&nbsp;<a>更多游戏</a>
+    </div>
+    <p id="color1"></p>
+    <p id="color2"></p>
+
+</body>
+</html>

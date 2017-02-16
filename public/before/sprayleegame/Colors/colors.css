@@ -1,0 +1,120 @@
+#startScreen{
+    /*width: 400px;*/
+    /*height:640px;*/
+    margin: auto;
+    /*border: 1px solid red;*/
+    text-align: center;
+}
+#startButton{
+    border-radius: 8px;
+    background-color: #ffd208;
+    color: #ffffff;
+    padding: 10px 35px;
+    text-decoration: none;
+}
+#startButton:hover{
+    background-color: #ffbf1d;
+}
+h1{
+    color: white;
+}
+#startScreen p{
+    color: #ffc2da;
+    line-height: 12px;
+}
+#startScreen a{
+    text-decoration: none;
+    font-size: small;
+}
+#gameScreen{
+    /*width: 400px;*/
+    /*height:640px;*/
+    margin: auto;
+    /*border: 1px solid red;*/
+    text-align: center;
+}
+#bigdiv{
+    float: left;
+    width: 60%;
+}
+#gameScreen #div1{
+    margin: 30px 10px;
+    float:left;
+    color: #ffc0d3;
+    width: 100px;
+}
+#gameScreen #div2{
+    margin: 20px 0;
+    float: right;
+    width:33%;
+    font-size: 30px;
+    color: white;
+}
+
+#pause{
+    margin: 20px;
+    width: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    padding:10px 20px;
+    background-color: #ff7f34;
+    float: right;
+}
+#pause:hover{
+    background-color: #fdbc93;
+}
+
+
+#gameStage{
+    width:360px;
+    height: 360px;
+    position: relative;
+    /*left: 5%;*/
+    top:150px;
+    margin: auto;
+}
+#overScreen{
+    text-align: center;
+
+}
+h2{
+    font-size: 50px;
+    line-height: 0.2;
+}
+#share,#playAgain{
+    display: block;
+    height:35px;
+    width:180px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: yellow;
+    line-height: 35px;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
