@@ -19,7 +19,7 @@ var config = {
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect(config.mongodbUrl);
+mongoose.connect(config.mongodbUrl, {auth:{authdb:"admin"}});
 
 
 module.exports = config;
