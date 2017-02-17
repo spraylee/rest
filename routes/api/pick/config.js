@@ -13,7 +13,7 @@ var config = {
   // mongodbUrl: 'mongodb://123.207.3.71:27017/local'
 
   // EC2 Singapore Area, Ubuntu MongoDB (Secret)
-  mongodbUrl: 'mongodb://spraylee:sp828856@54.169.112.39:57017/pick'
+  mongodbUrl: 'mongodb://spraylee:sp828856@spraylee.com:57017/pick'
 }
 
 
