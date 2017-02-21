@@ -8,18 +8,14 @@ var transporter = nodemailer.createTransport('smtps://' + config.account + ':' +
  *             title:*  string
  *             text:   string
  *             html:   string
+ *             files: []
  */
 var send = function (option) {
   return new Promise((resolve, reject) => {
 
-    var to = '';
+    var to = option.to;
     if (to instanceof Array) {
-      option.to.forEach(item => {
-        to && (to += ',');
-        to += item;
-      });
-    } else {
-      to = option.to;
+      to = option.to.join(",")
     }
 
     var mailOptions = {
@@ -27,10 +23,48 @@ var send = function (option) {
       to: to, // list of receivers
       subject: option.title, // Subject line
       // text: 'Hello world ✔', // plaintext body
-      // html: '<b>Hello world ✔</b>' // html body
+      // html: '<b>Hello world ✔</b>', // html body
+      // attachments: [{
+      //     filename: 'text0.txt',
+      //     content: 'hello world!'
+      //   },{
+      //     filename: 'text1.txt',
+      //     path: './attach/text1.txt'
+      //   }
+      // ],
+      logger: true,
+      debug: true
     };
     option.text && (mailOptions.text = option.text);
     option.html && (mailOptions.html = option.html);
+    console.log(option.files)
+    if (option.files[0]) {
+      mailOptions.attachments = option.files.map(f => {
+        return {
+          filename: f.split("/").slice(-1)[0],
+          path: f
+        }
+      })
+    }
+
+    try {
+      transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+          console.log(error);
+          resolve({
+            success: false,
+            error,
+            message: 'Mail send failed!'
+          })
+        }else{
+          console.log('Message sent: ' + info.response);
+          resolve(info.response)
+        }
+      });
+    } catch (err) {
+      console.log("-------------------------");
+      console.log(err)
+    }
 
     transporter.sendMail(mailOptions, function(error, info){
       if(error){
