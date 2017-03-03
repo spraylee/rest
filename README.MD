@@ -12,6 +12,8 @@ cd /usr/bin & mongo --port 57017 & use admin & db.auth("username","password") & 
 通过打开以下网址，检测数据库是否正常运行
 spraylee.com:57017
 
+linux 用export NODE_ENV=production 设置NODE为线上环境，echo $NODE_ENV 确定环境， 显示所有环境变量 env
+windows 上 set NODE_ENV=production
 开启Node进程
 cd /home/www/rest
 nvm use 7.1.0
